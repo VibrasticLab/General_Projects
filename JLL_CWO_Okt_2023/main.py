@@ -1,7 +1,7 @@
 import numpy as np
 
 import matplotlib.pyplot as plt
-from extract_digiducer import extract_digiducer, segmenting_data
+from extract_digiducer import extract_digiducer, segmenting_data, omega_arithmatic
 
 if __name__ == "__main__":
     # extract digiducer data
@@ -29,6 +29,20 @@ if __name__ == "__main__":
 
     segmented_data = segmenting_data(accA, datapoints)
 
-    # convert each acceleration data to velocity and displacement
+    # convert each acceleration data to velocity and displacement (need to be confirmed)
+    velA = []
+    for i in range(len(segmented_data)):
+        velA.append(omega_arithmatic(segmented_data[i], digiducer_fs))
 
+    dispA = []
+    for i in range(len(velA)):
+        dispA.append(omega_arithmatic(velA[i], digiducer_fs))
+
+    print(segmented_data[3][10:30])
+    print(velA[3][10:30])
+    print(dispA[3][10:30])
+
+    # visualize each data (acceleration, velocity, and displacement)
+
+    # evaluate the velocity and displacement data
 

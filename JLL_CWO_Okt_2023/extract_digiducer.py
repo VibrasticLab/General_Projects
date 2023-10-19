@@ -24,12 +24,31 @@ def extract_digiducer():
     return time, accA, accB
 
 def segmenting_data(data, data_points):
+    # create empty arary for segmented data
     segmented_data = []
+
+    # split the data based on defined start- and end-point
     for i in range(len(data_points)):
         segment = data[data_points[i][0]:data_points[i][1]]
         segmented_data.append(segment)
 
     return segmented_data
+
+def omega_arithmatic(initial_data, fs):
+    # FFT parameter
+    nfft = int(pow(2, np.ceil(np.log2(len(initial_data)))))
+    # win = np.hamming(nfft)
+    freq = (fs / 2) * np.arange(0, 1, 1/(nfft))
+    amp = np.fft.fft(initial_data) #[0:int(nfft/2+1)]
+
+    # Integration in frequency domain
+    amp_int = []
+    for i in range(len(amp)):
+        amp_int.append(amp[i]/(2j * np.pi * freq[i]))
+
+    converted_data = np.fft.ifft(amp_int)
+
+    return converted_data
 
 
 if __name__ == "__main__":

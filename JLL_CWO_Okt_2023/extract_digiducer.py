@@ -23,5 +23,14 @@ def extract_digiducer():
 
     return time, accA, accB
 
+def segmenting_data(data, data_points):
+    segmented_data = []
+    for i in range(len(data_points)):
+        segment = data[data_points[i][0]:data_points[i][1]]
+        segmented_data.append(segment)
+
+    return segmented_data
+
+
 if __name__ == "__main__":
     extract_digiducer()

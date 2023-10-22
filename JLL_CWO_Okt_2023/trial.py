@@ -1,5 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
+from additional_functions import *
 
 if __name__ == "__main__":
     fs = 2000
@@ -55,6 +56,18 @@ if __name__ == "__main__":
     ax2 = fig2.add_subplot(212)
     ax2.plot(t, vel)
 
+    # Defining velosity using function in utils
+    vel, VEL, freq_new = omega_arithmatic(acc, fs, cut_off_frequency=20)
+
+    fig5 = plt.figure()
+    ax = fig5.add_subplot(211)
+    ax.plot(freq_new, abs(VEL)*1000)
+    ax.grid(True, which='both')
+
+    ax2 = fig5.add_subplot(212)
+    ax2.plot(t, vel*1000)
+
+
     # Defining Velocity (1st approach)
     DISP = []
     for i in range(len(freq)):
@@ -70,12 +83,12 @@ if __name__ == "__main__":
 
     disp = disp / win
 
-    fig2 = plt.figure()
-    ax = fig2.add_subplot(211)
+    fig4 = plt.figure()
+    ax = fig4.add_subplot(211)
     ax.plot(freq, abs(DISP))
     ax.grid(True, which='both')
 
-    ax2 = fig2.add_subplot(212)
+    ax2 = fig4.add_subplot(212)
     ax2.plot(t, disp)
 
     # Defining Displacement
@@ -95,10 +108,10 @@ if __name__ == "__main__":
 
     fig3 = plt.figure()
     ax = fig3.add_subplot(211)
-    ax.plot(freq, abs(DISP))
+    ax.plot(freq, abs(DISP)*1e6)
     ax.grid(True, which='both')
 
     ax2 = fig3.add_subplot(212)
-    ax2.plot(t, disp)
+    ax2.plot(t, disp*1e6)
 
     plt.show()

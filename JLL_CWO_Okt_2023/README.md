@@ -32,9 +32,7 @@ Jam: 16:00 WIB sampai 20:00 WIB
 
 ### Storage
 
-#### Dokumentasi: Classified
-
-#### Koleksi Data: Classified
+[OneDrive](https://1drv.ms/f/s!AqmTvtU649UXhqdle-mpDXsV8S_2pw?e=WKJ3yN)
 
 ### Skrip Python
 

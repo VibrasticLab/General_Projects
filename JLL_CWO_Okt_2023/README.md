@@ -32,9 +32,9 @@ Jam: 16:00 WIB sampai 20:00 WIB
 
 ### Storage
 
-#### Dokumentasi
+#### Dokumentasi: Classified
 
-#### Koleksi Data
+#### Koleksi Data: Classified
 
 ### Skrip Python
 

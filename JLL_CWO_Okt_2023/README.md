@@ -36,4 +36,9 @@ Jam: 16:00 WIB sampai 20:00 WIB
 
 ### Skrip Python
 
+- [Ekstrak Data](https://github.com/VibrasticLab/General_Projects/blob/main/JLL_CWO_Okt_2023/extractdata_nidaq.ipynb)
+- [Proses Data](https://github.com/VibrasticLab/General_Projects/blob/main/JLL_CWO_Okt_2023/data_process.ipynb)
+
 ### Kesimpulan
+
+Kegiatan penelitian selesai dilakukan

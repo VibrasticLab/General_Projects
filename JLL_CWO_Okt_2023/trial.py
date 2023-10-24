@@ -16,14 +16,6 @@ if __name__ == "__main__":
 
     ACC = 2/len(t) * np.fft.fft(win*acc, nfft)
 
-    pACC = []
-    for i in range(len(freq)):
-        if ACC[i].imag == 0:
-            pACC.append(0)
-        else:
-            pACC.append(np.rad2deg(np.arctan(ACC[i].real/ACC[i].imag)))
-    pACC = np.array(pACC)
-
     fig = plt.figure()
     ax = fig.add_subplot(211)
     ax.plot(t, acc)
@@ -57,7 +49,7 @@ if __name__ == "__main__":
     ax2.plot(t, vel)
 
     # Defining velosity using function in utils
-    vel, VEL, freq_new = omega_arithmatic(acc, fs, cut_off_frequency=20)
+    vel2, VEL2, _, _, freq_new = convert_units(acc, fs, cut_off_frequency=20)
 
     fig5 = plt.figure()
     ax = fig5.add_subplot(211)
@@ -67,8 +59,7 @@ if __name__ == "__main__":
     ax2 = fig5.add_subplot(212)
     ax2.plot(t, vel*1000)
 
-
-    # Defining Velocity (1st approach)
+    # Defining Displacement (1st approach)
     DISP = []
     for i in range(len(freq)):
         if freq[i] <= 20:
@@ -91,27 +82,19 @@ if __name__ == "__main__":
     ax2 = fig4.add_subplot(212)
     ax2.plot(t, disp)
 
-    # Defining Displacement
-    DISP = []
-    for i in range(len(freq)):
-        if freq[i] <= 20:
-            DISP.append(0)
-        else:
-            DISP.append(ACC[i] / pow((2j * np.pi * freq[i]),2))
+    # Defining displacement using function in utils
+    _, _, disp2, DISP2, freq_new = convert_units(acc, fs, cut_off_frequency=20)
 
-    DISP = np.array(DISP)
+    # check whether the built-in function and the existed computation resulting on the same values
+    print(np.array_equal(disp, disp2))
+    print(np.array_equal(DISP, DISP2))
 
-    disp = np.fft.ifft(DISP / (1/len(t)), nfft)
-    disp = disp[0:len(t)]
-
-    disp = disp / win
-
-    fig3 = plt.figure()
-    ax = fig3.add_subplot(211)
-    ax.plot(freq, abs(DISP)*1e6)
+    fig5 = plt.figure()
+    ax = fig5.add_subplot(211)
+    ax.plot(freq_new, abs(DISP2)*1e6)
     ax.grid(True, which='both')
 
-    ax2 = fig3.add_subplot(212)
-    ax2.plot(t, disp*1e6)
+    ax2 = fig5.add_subplot(212)
+    ax2.plot(t, disp2*1e6)
 
     plt.show()

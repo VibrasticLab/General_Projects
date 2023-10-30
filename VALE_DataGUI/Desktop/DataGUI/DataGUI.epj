@@ -2,7 +2,7 @@
   "header": {
     "comment": "eric project file for project DataGUI",
     "copyright": "Copyright (C) 2023 , ",
-    "saved": "2023-10-30, 19:50:01"
+    "saved": "2023-10-30, 21:35:11"
   },
   "project": {
     "AUTHOR": "",
@@ -73,9 +73,9 @@
     },
     "RESOURCES": [],
     "SOURCES": [
-      "__init__.py",
+      "main.py",
       "ui/Ui_mainwindow.py",
-      "ui/__init__.py"
+      "ui/mainwindow.py"
     ],
     "SOURCESDIR": "",
     "SPELLEXCLUDES": "",

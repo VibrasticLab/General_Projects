@@ -1,0 +1,5 @@
+*project/
+.jedi/
+ui/Ui_*
+__init__.py
+__pycache__/

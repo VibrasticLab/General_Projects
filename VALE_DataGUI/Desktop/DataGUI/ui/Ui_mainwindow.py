@@ -12,25 +12,31 @@ from PyQt6 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(1171, 872)
+        MainWindow.resize(1000, 800)
         self.centralWidget = QtWidgets.QWidget(parent=MainWindow)
         self.centralWidget.setObjectName("centralWidget")
         self.grpDataPlot = QtWidgets.QGroupBox(parent=self.centralWidget)
-        self.grpDataPlot.setGeometry(QtCore.QRect(10, 200, 1141, 311))
+        self.grpDataPlot.setGeometry(QtCore.QRect(10, 150, 981, 361))
         self.grpDataPlot.setStyleSheet("QGroupBox { \n"
 "     border: 2px solid gray; \n"
 "     border-radius: 3px; \n"
 " } ")
         self.grpDataPlot.setObjectName("grpDataPlot")
+        self.frmDataPlot = QtWidgets.QFrame(parent=self.grpDataPlot)
+        self.frmDataPlot.setGeometry(QtCore.QRect(10, 20, 961, 331))
+        self.frmDataPlot.setFrameShape(QtWidgets.QFrame.Shape.StyledPanel)
+        self.frmDataPlot.setFrameShadow(QtWidgets.QFrame.Shadow.Raised)
+        self.frmDataPlot.setObjectName("frmDataPlot")
         self.grpDataAnalysis = QtWidgets.QGroupBox(parent=self.centralWidget)
-        self.grpDataAnalysis.setGeometry(QtCore.QRect(10, 540, 1141, 271))
+        self.grpDataAnalysis.setGeometry(QtCore.QRect(10, 520, 981, 211))
         self.grpDataAnalysis.setStyleSheet("QGroupBox { \n"
 "     border: 2px solid gray; \n"
 "     border-radius: 3px; \n"
 " } ")
+        self.grpDataAnalysis.setFlat(False)
         self.grpDataAnalysis.setObjectName("grpDataAnalysis")
         self.grpDataSource = QtWidgets.QGroupBox(parent=self.centralWidget)
-        self.grpDataSource.setGeometry(QtCore.QRect(10, 20, 1141, 131))
+        self.grpDataSource.setGeometry(QtCore.QRect(10, 10, 981, 131))
         self.grpDataSource.setStyleSheet("QGroupBox { \n"
 "     border: 2px solid gray; \n"
 "     border-radius: 3px; \n"
@@ -38,7 +44,7 @@ class Ui_MainWindow(object):
         self.grpDataSource.setObjectName("grpDataSource")
         MainWindow.setCentralWidget(self.centralWidget)
         self.menuBar = QtWidgets.QMenuBar(parent=MainWindow)
-        self.menuBar.setGeometry(QtCore.QRect(0, 0, 1171, 21))
+        self.menuBar.setGeometry(QtCore.QRect(0, 0, 1000, 21))
         self.menuBar.setObjectName("menuBar")
         self.menuFile = QtWidgets.QMenu(parent=self.menuBar)
         self.menuFile.setObjectName("menuFile")

@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1171</width>
-    <height>872</height>
+    <width>1000</width>
+    <height>800</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -18,9 +18,9 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>200</y>
-      <width>1141</width>
-      <height>311</height>
+      <y>150</y>
+      <width>981</width>
+      <height>361</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -32,14 +32,30 @@
     <property name="title">
      <string>Data Plot</string>
     </property>
+    <widget class="QFrame" name="frmDataPlot">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>961</width>
+       <height>331</height>
+      </rect>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+    </widget>
    </widget>
    <widget class="QGroupBox" name="grpDataAnalysis">
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>540</y>
-      <width>1141</width>
-      <height>271</height>
+      <y>520</y>
+      <width>981</width>
+      <height>211</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -51,13 +67,16 @@
     <property name="title">
      <string>Data Analysis</string>
     </property>
+    <property name="flat">
+     <bool>false</bool>
+    </property>
    </widget>
    <widget class="QGroupBox" name="grpDataSource">
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>20</y>
-      <width>1141</width>
+      <y>10</y>
+      <width>981</width>
       <height>131</height>
      </rect>
     </property>
@@ -77,7 +96,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1171</width>
+     <width>1000</width>
      <height>21</height>
     </rect>
    </property>

@@ -29,8 +29,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         
         self.gui_setup()
         
-    def gui_setup(self):
-        
+    def gui_setup(self):        
         dp = DataProcess()
         hbox = dp.examplePlot()
         
@@ -38,8 +37,8 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         
         self.statusBar.showMessage("Idle")
         self.setFixedSize(1000, 800)
-        #self.showFullScreen()
-
+        #self.showFullScreen():        
+        
     @pyqtSlot()
     def on_actionAboutQt_triggered(self):
         QWidgets.QMessageBox.aboutQt(self, "About Qt")

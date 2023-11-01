@@ -41,10 +41,13 @@ class DemoRoutine():
         # create a column with the unique cut number
         df_labels['cut_no'] = [i for i in range(167)]
         
-        fig, ax = plt.subplots()
+        fig, ax = plt.subplots(2)
 
-        ax.plot(data[0,166]['smcAC'],'g-',label='smcAC')
-        ax.plot(data[0,166]['smcDC'],color='orange',label='smcDC')
+        ax[0].plot(data[0,166]['smcAC'],'g-',label='smcAC')
+        ax[0].plot(data[0,166]['smcDC'],color='orange',label='smcDC')
+        ax[1].plot(data[0,105]['smcAC'],'g-',label='smcAC')
+        ax[1].plot(data[0,105]['smcDC'],color='orange',label='smcDC')
+        
         plt.legend()
         
         style.use('ggplot')

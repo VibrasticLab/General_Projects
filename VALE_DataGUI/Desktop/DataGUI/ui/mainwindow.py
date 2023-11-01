@@ -8,7 +8,6 @@ import sys
 import numpy as np
 
 from PyQt6.QtCore import PYQT_VERSION_STR
-import PyQt6.QtGui as QGui
 import PyQt6.QtWidgets as QWidgets
 from PyQt6.QtCore import pyqtSlot
 from PyQt6.QtWidgets import QMainWindow

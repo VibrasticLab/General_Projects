@@ -120,7 +120,7 @@ class Ui_MainWindow(object):
         self.btnProcess.setGeometry(QtCore.QRect(100, 10, 91, 71))
         self.btnProcess.setObjectName("btnProcess")
         self.lblLogoITS = QtWidgets.QLabel(parent=self.centralWidget)
-        self.lblLogoITS.setGeometry(QtCore.QRect(850, 10, 131, 131))
+        self.lblLogoITS.setGeometry(QtCore.QRect(870, 40, 91, 81))
         self.lblLogoITS.setText("")
         self.lblLogoITS.setPixmap(QtGui.QPixmap("/home/viblab/_developments_/Projects/General_Projects/VALE_DataGUI/Desktop/DataGUI/ui/kampusmerdeka.jpg"))
         self.lblLogoITS.setScaledContents(True)

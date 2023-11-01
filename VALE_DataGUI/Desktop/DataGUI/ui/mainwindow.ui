@@ -250,7 +250,7 @@
      <property name="title">
       <string>Data Set</string>
      </property>
-     <widget class="QPushButton" name="btnListData">
+     <widget class="QPushButton" name="btnListDataset">
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -263,7 +263,7 @@
        <string>Refresh</string>
       </property>
      </widget>
-     <widget class="QComboBox" name="cmbDataSetList">
+     <widget class="QComboBox" name="cmbDatasetList">
       <property name="geometry">
        <rect>
         <x>100</x>
@@ -273,7 +273,7 @@
        </rect>
       </property>
      </widget>
-     <widget class="QPushButton" name="btnCheck">
+     <widget class="QPushButton" name="btnTestDataset">
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -283,10 +283,10 @@
        </rect>
       </property>
       <property name="text">
-       <string>Check Database</string>
+       <string>Test Database</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="btnFetchDataSet">
+     <widget class="QPushButton" name="btnFetchDataset">
       <property name="geometry">
        <rect>
         <x>140</x>
@@ -371,7 +371,7 @@
      <property name="title">
       <string>Process Data</string>
      </property>
-     <widget class="QPushButton" name="btnCheckCSV">
+     <widget class="QPushButton" name="btnShowCSV">
       <property name="geometry">
        <rect>
         <x>10</x>

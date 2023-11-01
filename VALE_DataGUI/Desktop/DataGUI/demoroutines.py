@@ -56,9 +56,23 @@ class DemoRoutine():
         
         return hbox
         
-    def exampleDisconnectWarning(self):
+    def exampleErrorDisconnect(self):
         mbox = QMessageBox()
         mbox.setIcon(QMessageBox.Icon.Critical)
         mbox.setText("Server Disconnected")
+        mbox.setWindowTitle("Error")
+        mbox.exec()
+        
+    def exampleErrorEmpty(self):
+        mbox = QMessageBox()
+        mbox.setIcon(QMessageBox.Icon.Critical)
+        mbox.setText("Empty Data")
+        mbox.setWindowTitle("Error")
+        mbox.exec()
+        
+    def exampleErrorUnimplemented(self):
+        mbox = QMessageBox()
+        mbox.setIcon(QMessageBox.Icon.Critical)
+        mbox.setText("Sadly, Not Implemented")
         mbox.setWindowTitle("Error")
         mbox.exec()

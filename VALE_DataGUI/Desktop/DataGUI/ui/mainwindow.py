@@ -88,8 +88,28 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         
     @pyqtSlot()
     def on_actionExit_triggered(self):
-        self.close()        
+        self.close()
 
     @pyqtSlot()
-    def on_btnListData_pressed(self):
-        self.demo.exampleDisconnectWarning()
+    def on_btnListDataset_pressed(self):
+        self.demo.exampleErrorDisconnect()
+
+    @pyqtSlot()
+    def on_btnTestDataset_pressed(self):
+        self.demo.exampleErrorDisconnect()
+
+    @pyqtSlot()
+    def on_btnFetchDataset_pressed(self):
+        self.demo.exampleErrorDisconnect()
+
+    @pyqtSlot()
+    def on_btnShowCSV_pressed(self):
+        self.demo.exampleErrorEmpty()
+
+    @pyqtSlot()
+    def on_btnModifyData_pressed(self):
+        self.demo.exampleErrorEmpty()
+
+    @pyqtSlot()
+    def on_btnProcess_pressed(self):
+        self.demo.exampleErrorUnimplemented()

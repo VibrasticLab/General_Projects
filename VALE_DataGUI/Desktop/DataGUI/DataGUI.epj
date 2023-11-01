@@ -2,7 +2,7 @@
   "header": {
     "comment": "eric project file for project DataGUI",
     "copyright": "Copyright (C) 2023 , ",
-    "saved": "2023-10-31, 16:36:06"
+    "saved": "2023-11-01, 14:36:00"
   },
   "project": {
     "AUTHOR": "",
@@ -74,6 +74,7 @@
     "RESOURCES": [],
     "SOURCES": [
       "dataprocess.py",
+      "demoroutines.py",
       "main.py",
       "ui/Ui_mainwindow.py",
       "ui/mainwindow.py"

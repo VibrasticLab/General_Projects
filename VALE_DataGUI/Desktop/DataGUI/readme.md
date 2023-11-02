@@ -38,4 +38,6 @@ python main.py
 
 ### Windows
 
-Using [pynsist]([GitHub - takluyver/pynsist: Build Windows installers for Python applications](https://github.com/takluyver/pynsist)), based on [NSIS]([Download - NSIS](https://nsis.sourceforge.io/Download))
+Using [pynsist](https://github.com/takluyver/pynsist), based on [NSIS](https://nsis.sourceforge.io/Download)
+
+

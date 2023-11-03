@@ -17,6 +17,7 @@ Path for data example: **DataGUI/dataset/mill/mill.mat**
 - Software AVEVA PIVision already exist and functional
 - Develop algorithm to analyze and model the data
 - Integrate the algorithm to PIVision
+- Testing on-site using recent data
 
 ---
 

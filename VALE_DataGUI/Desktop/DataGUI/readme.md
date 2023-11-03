@@ -12,6 +12,14 @@ Path for data example: **DataGUI/dataset/mill/mill.mat**
 
 ---
 
+## Technical Requirements
+
+- Software AVEVA PIVision already exist and functional
+- Develop algorithm to analyze and model the data
+- Integrate the algorithm to PIVision
+
+---
+
 ## Setup
 
 ### Generic Python
@@ -39,5 +47,3 @@ python main.py
 ### Windows
 
 Using [pynsist](https://github.com/takluyver/pynsist), based on [NSIS](https://nsis.sourceforge.io/Download)
-
-
